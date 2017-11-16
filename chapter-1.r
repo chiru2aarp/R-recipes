@@ -211,7 +211,7 @@ mean(dat$Income, na.rm = TRUE)
 #Recipe: Replace missing values with the mean
 #--------------------------------------------
 
-dat <- read.csv("missing-data.csv", na.strings = "")
+dat <- read.csv("C:/Users/cuppu/Downloads/Analytics/Books/R Recipes/module 1/3/missing-data.csv", na.strings = "")
 dat$Income.imp.mean <- ifelse(is.na(dat$Income), 
        mean(dat$Income, na.rm=TRUE), dat$Income)
 
@@ -224,6 +224,8 @@ rand.impute <- function(a) {
   return (imputed)
 }
 
+
+
 random.impute.data.frame <- function(dat, cols) {
   nms <- names(dat)
   for(col in cols) {
@@ -234,7 +236,7 @@ random.impute.data.frame <- function(dat, cols) {
 }
 
 
-dat <- read.csv("missing-data.csv", na.strings="")
+dat <- read.csv("C:/Users/cuppu/Downloads/Analytics/Books/R Recipes/module 1/3/missing-data.csv", na.strings="")
 random.impute.data.frame(dat, c(1,2))
 
 #Recipe: Remove duplicate cases
